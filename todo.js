@@ -1,0 +1,21 @@
+const toDoForm = document.querySelector(".js-toDoForm"), toDoInput=toDoForm.querySelector("input"), toDoList=document.querySelector(".js-toDoList");
+
+const TODOS_LS="toDos";
+
+function paintToDo(text){
+console.log(text);
+}
+
+function handleSubmit(event){
+event.preventDefault();
+const currentValue=toDoInput.value;
+paintToDo(currentValue);
+}
+
+
+function init(){
+
+toDoForm.addEventListener("submit",handleSubmit);
+}
+
+init();
